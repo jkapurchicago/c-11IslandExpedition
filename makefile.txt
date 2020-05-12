@@ -1,0 +1,11 @@
+expedition: main.o Island.o
+	g++ main.o Island.o -o expedition
+
+main.o: main.cpp Island.h List.h
+	g++ -c main.cpp
+
+Island.o: Island.cpp Island.h List.h
+	g++ -c Island.cpp
+
+clean:
+	rm main.o Island.o expedition
